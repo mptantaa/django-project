@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}Цены{% endblock %}
+{% block main %}
+    <section class="prices">
+        <h2>Цены</h2>
+
+    {% if prices_by_category %}
+        {% for category, prices in prices_by_category.items %}
+            <h3>{{ category.name }}</h3>
+            <table>
+                <tr>
+                    <th style="width: 74%;">Наименование работ</th>
+                    <th style="width: 11%;">Ед. изм.</th>
+                    <th style="width: 15%;">Цена, руб.</th>
+                </tr>           
+                {% for item in prices %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.unit }}</td>
+                        <td>{{ item.price }}</td>
+                    </tr>
+                {% endfor %}
+            </table>  
+        {% endfor %}
+    {% else %}
+        <p>Информации нет</p>
+    {% endif %}
+    </section>
+{% endblock %}

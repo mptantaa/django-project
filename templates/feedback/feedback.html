@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}Контакты{% endblock %}
+{% block main %}
+  <section class="contacts">
+    <h2>Контакты</h2>
+    <div class="staff">
+      {% if contacts %}
+      {% for item in contacts %}
+          
+          <div class="staff-item">
+            <p>{{ item.name }}</p>
+            <p>Должность: {{ item.job }}</p>
+            <p>Телефон: {{ item.phone }}</p>
+            <p>Почта: {{ item.email }}</p>
+          </div>
+  
+      {% endfor %}
+      {% else %}
+          <p>Информации нет</p>
+      {% endif %}
+    </div>
+
+  </section>
+  <section class="feedback">
+      <h2>Обратная связь</h2>
+      
+      <form method="post">
+        {% csrf_token %}
+        {{ form.name }}
+        {{ form.phone }}
+        {{ form.message }}
+        <button type="submit">Отправить</button>
+      </form>
+  </section>
+{% endblock %}

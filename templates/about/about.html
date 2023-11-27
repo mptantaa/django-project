@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}О нас{% endblock %}
+{% block main %}
+    <section class="about">
+        
+    {% if about %}
+        {% for item in about %}
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.about_text }}</p>
+        {% endfor %}
+    {% else %}
+        <p>Информации нет</p>
+    {% endif %}
+    </section>
+{% endblock %}

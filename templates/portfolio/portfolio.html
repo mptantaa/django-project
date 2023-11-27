@@ -1,0 +1,26 @@
+
+
+  {% extends 'layout.html' %}
+
+  {% block title %}Портфолио{% endblock %}
+  {% block main %}
+      <section class="portfolio">
+          <h2>Портфолио</h2>
+  
+      {% if portfolios %}
+        <div class="portfolios">
+            {% for item in portfolios %}
+            <div class="image">
+                <img src="{{ item.image.url }}" alt="Работа">
+                <div class="name"><a href="{% url 'portfolio' item.id %}">{{ item.name }}</a></div>
+                <div class="unit">{{ item.unit }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        
+      {% else %}
+          <p>Информации нет</p>
+      {% endif %}
+      </section>
+  {% endblock %}
+  

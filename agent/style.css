@@ -1,0 +1,237 @@
+/* Reset default body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.2s ease-in-out;
+}
+
+h1 {
+    font-size: 25px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Hero section styles */
+    .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(30%)
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+  
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+}
+
+footer h3 {
+    margin: 0;
+}
+  
+
+
+.about h2, .prices h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.prices h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.about p, .prices p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0rem 10rem 10rem;
+}
+.staff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    }
+    
+.staff-item {
+    width: 20%;
+    margin: 1rem;
+}
+
+.staff-item p {
+    margin: 0;
+}
+.contacts p {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin: 0;
+}
+.feedback h2, .contacts h2, .portfolio h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+form {
+    display: flex;
+    margin: 0 3rem 10rem 4rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+input[type="text"],
+textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    min-width: 25%;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10rem;
+    border: 1px solid #ddd;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+  
+th {
+    background-color: #ddd;
+    font-weight: bold;
+}
+.portfolios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+  
+  .image {
+    width: 25%;
+    position: relative;
+    margin: 1rem;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    max-width: 1080px;
+    max-height: 1080px;
+    display: block;
+  }
+  .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .unit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }

@@ -1,0 +1,29 @@
+
+
+  {% extends 'layout.html' %}
+
+  {% block title %}Портфолио{% endblock %}
+  {% block main %}
+      {% if object %}
+      <section class="object">
+          <h2>{{ object.name }}</h2>
+  
+      
+        <div class="object-info">
+            <div class="info-image">
+                <img src="{{ object.image.url }}" alt="Работа">
+            </div>
+            <div class="info-text">
+                <div class="info-unit"><bold>Метраж:</bold> {{ object.unit }}</div>
+                <div class="info-description"><bold>Описание:</bold> {{ object.description }}</div>
+
+            </div>
+
+        </div>
+        
+      {% else %}
+          <p>Информации нет</p>
+      {% endif %}
+      </section>
+  {% endblock %}
+  
