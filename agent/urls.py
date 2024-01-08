@@ -21,12 +21,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from portfolio.views import PortfoliosViewSet
 from prices.views import PricesViewSet, CategoriesViewSet
+from feedback.views import FeedbacksViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'portfolio', PortfoliosViewSet, basename='portfolios')
 router.register(r'prices', PricesViewSet, basename='prices')
 router.register(r'categories', CategoriesViewSet, basename='categories')
+router.register(r'feedbacks', FeedbacksViewSet, basename='feedbacks')
 
 urlpatterns = [
     path('', views.index, name="index"),

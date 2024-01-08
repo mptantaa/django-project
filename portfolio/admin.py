@@ -10,7 +10,6 @@ class PortlofiosResource(resources.ModelResource):
         model = Portlofios
         fields = ('id', 'name', 'unit', 'description', 'image')
 
-
 class PortlofiosAdmin(ExportActionMixin, ExportMixin, admin.ModelAdmin):
     list_display = ['name', 'unit', 'image']
     list_per_page = 10
@@ -19,6 +18,7 @@ class PortlofiosAdmin(ExportActionMixin, ExportMixin, admin.ModelAdmin):
         models.ImageField: {'widget': admin.widgets.AdminFileWidget},
     }
     resource_class = PortlofiosResource
+
 
 
 admin.site.register(Portlofios, PortlofiosAdmin)
